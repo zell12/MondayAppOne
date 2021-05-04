@@ -1,0 +1,1041 @@
+﻿{
+  "DataContractVersion": "1.0",
+  "DocumentTypes": [
+    {
+      "DocumentTypeId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders",
+      "Group": "Semi-Structured Documents",
+      "Category": "Generalized ML Models",
+      "Name": "Purchase Orders",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.ClientName",
+          "FieldName": "Customer Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.VendorName",
+          "FieldName": "Supplier",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.PONumber",
+          "FieldName": "Order No.",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Date",
+          "FieldName": "Order Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.PaymentTerms",
+          "FieldName": "Terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.DeliveryByDate",
+          "FieldName": "Delivery Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.ShippingAddress",
+          "FieldName": "Delivery Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.TotalAmount",
+          "FieldName": "Total Amount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items",
+          "FieldName": "Items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items.Description",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items.UnitPrice",
+              "FieldName": "Unit Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items.Quantity",
+              "FieldName": "Qty",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items.LineAmount",
+              "FieldName": "Amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.PurchaseOrders.Items.ProductCode",
+              "FieldName": "Product Code",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts",
+      "Group": "Semi-Structured Documents",
+      "Category": "Generalized ML Models",
+      "Name": "Receipts",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.ReceiptName",
+          "FieldName": "Receipt Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.ReceiptDate",
+          "FieldName": "Receipt Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.TotalValue",
+          "FieldName": "Total Value",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.Items",
+          "FieldName": "Items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.Items.Description",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.Items.Amount",
+              "FieldName": "Amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.Items.UnitPrice",
+              "FieldName": "Unit Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Receipts.Items.Qty",
+              "FieldName": "Qty",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices",
+      "Group": "Semi-Structured Documents",
+      "Category": "Generalized ML Models",
+      "Name": "Invoices",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Date",
+          "FieldName": "Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Name",
+          "FieldName": "Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.InvoiceNo",
+          "FieldName": "Invoice No.",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.PONo",
+          "FieldName": "PO No.",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.BillingAddress",
+          "FieldName": "Billing Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.ShippingAddress",
+          "FieldName": "Shipping Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.VendorAddress",
+          "FieldName": "Vendor Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.EmailAddress",
+          "FieldName": "Website Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Currency",
+          "FieldName": "Currency",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.TaxAmount",
+          "FieldName": "Tax Amount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Total",
+          "FieldName": "Total",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items",
+          "FieldName": "Items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items.Description",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items.ItemPONo",
+              "FieldName": "Item PO No.",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items.Amount",
+              "FieldName": "Amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items.Qty",
+              "FieldName": "Qty",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.GeneralizedMLModels.Invoices.Items.UnitPrice",
+              "FieldName": "Unit Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "StructuredDocuments.IRSForms.IRS4506-T",
+      "Group": "Structured Documents",
+      "Category": "IRS Forms",
+      "Name": "IRS 4506-T",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.1a_Name",
+          "FieldName": "1a_Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.1b_SSN",
+          "FieldName": "1b_SSN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.2a_SpouseName",
+          "FieldName": "2a_Spouse Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.2b_SpouseSSN",
+          "FieldName": "2b_Spouse SSN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.3_CurrentName&Address",
+          "FieldName": "3_Current Name & Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.4_PreviousAddress",
+          "FieldName": "4_Previous Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.5_ThirdPartyName&Address",
+          "FieldName": "5_Customer File No.",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.6_TranscriptRequested",
+          "FieldName": "6_Transcript Requested",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.6a_ReturnTranscript",
+          "FieldName": "6a_Return Transcript",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.6b_AccountTranscript",
+          "FieldName": "6b_Account Transcript",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.6c_RecordofAccount",
+          "FieldName": "6c_Record of Account",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.7_VerificationofNonfiling",
+          "FieldName": "7_Verification of Nonfiling",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.8_SeriesTranscript",
+          "FieldName": "8_Series Transcript",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.9_PeriodRequested",
+          "FieldName": "9_Period Requested",
+          "IsMultiValue": true,
+          "Type": "Date",
+          "DeriveFieldsFormat": "(Month, Day, Year)",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.Attestation",
+          "FieldName": "Attestation",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.Signature",
+          "FieldName": "Signature",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRS4506-T.SignatureDate",
+          "FieldName": "Signature Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "StructuredDocuments.IRSForms.IRSW-9",
+      "Group": "Structured Documents",
+      "Category": "IRS Forms",
+      "Name": "IRS W-9",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "StructuredDocuments.IRSForms.IRSW-9.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.1_Name",
+          "FieldName": "1_Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.2_BusinessName",
+          "FieldName": "2_Business Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_Individual",
+          "FieldName": "3_Individual",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_CCorp",
+          "FieldName": "3_C Corp",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_SCorp",
+          "FieldName": "3_S Corp",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_Partnership",
+          "FieldName": "3_Partnership",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_TrustEstate",
+          "FieldName": "3_Trust/Estate",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.3_LLC",
+          "FieldName": "3_LLC",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.5_StreetAddress",
+          "FieldName": "5_Street Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.6_City",
+          "FieldName": "6_City",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.7_AccountNumber",
+          "FieldName": "7_Account Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.SSN",
+          "FieldName": "SSN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.EIN",
+          "FieldName": "EIN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.Signature",
+          "FieldName": "Signature",
+          "IsMultiValue": false,
+          "Type": "Boolean",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.IRSForms.IRSW-9.SignatureDate",
+          "FieldName": "Signature Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "StructuredDocuments.HRForms.ReimbursementForm",
+      "Group": "Structured Documents",
+      "Category": "HR Forms",
+      "Name": "Reimbursement Form",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.Name",
+          "FieldName": "Receipt Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.Address",
+          "FieldName": "Street",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.City",
+          "FieldName": "City",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.State",
+          "FieldName": "State",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.ZIP",
+          "FieldName": "ZIP",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.Reimbursements",
+          "FieldName": "Items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.Reimbursements.ExpenseDetail",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.Reimbursements.Amount",
+              "FieldName": "Amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        },
+        {
+          "FieldId": "StructuredDocuments.HRForms.ReimbursementForm.TotalReimbursement",
+          "FieldName": "Total Value",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "Semi-StructuredDocuments.SECFilings.FinancialReport",
+      "Group": "Semi-Structured Documents",
+      "Category": "SEC Filings",
+      "Name": "Financial Report",
+      "OptionalUniqueIdentifier": null,
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.ReportType",
+          "FieldName": "Report Type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.PeriodEndedDate",
+          "FieldName": "Period Ended Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.CommissionFileNumber",
+          "FieldName": "Commission File Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.ReportTableofContents",
+          "FieldName": "Report Table of Contents",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.ReportTableofContents.ChapterName",
+              "FieldName": "Chapter Name",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.ReportTableofContents.PageNumber",
+              "FieldName": "Page Number",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.Assets",
+          "FieldName": "Assets",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.Assets.LineItem",
+              "FieldName": "Line Item",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.Assets.Current",
+              "FieldName": "Current",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.SECFilings.FinancialReport.Assets.Past",
+              "FieldName": "Past",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            }
+          ],
+          "SetValues": []
+        }
+      ]
+    }
+  ],
+  "Groups": [
+    {
+      "Name": "Semi-Structured Documents",
+      "Categories": [
+        "Generalized ML Models",
+        "SEC Filings"
+      ]
+    },
+    {
+      "Name": "Structured Documents",
+      "Categories": [
+        "Face Sheets",
+        "HR Forms",
+        "IRS Forms",
+        "Prescriptions",
+        "HR Forms"
+      ]
+    }
+  ],
+  "SupportedLanguages": [
+    {
+      "Name": "Undetermined Language",
+      "Code": "und"
+    },
+    {
+      "Name": "Bulgarian",
+      "Code": "bul"
+    },
+    {
+      "Name": "Cantonese",
+      "Code": "yue"
+    },
+    {
+      "Name": "Danish",
+      "Code": "dan"
+    },
+    {
+      "Name": "Dutch",
+      "Code": "nld"
+    },
+    {
+      "Name": "English",
+      "Code": "eng"
+    },
+    {
+      "Name": "French",
+      "Code": "fra"
+    },
+    {
+      "Name": "Georgian",
+      "Code": "kat"
+    },
+    {
+      "Name": "German",
+      "Code": "deu"
+    },
+    {
+      "Name": "Greek",
+      "Code": "ell"
+    },
+    {
+      "Name": "Hebrew",
+      "Code": "heb"
+    },
+    {
+      "Name": "Hindi",
+      "Code": "hin"
+    },
+    {
+      "Name": "Italian",
+      "Code": "ita"
+    },
+    {
+      "Name": "Japanese",
+      "Code": "jpn"
+    },
+    {
+      "Name": "Korean",
+      "Code": "kor"
+    },
+    {
+      "Name": "Macedonian",
+      "Code": "mkd"
+    },
+    {
+      "Name": "Mandarin",
+      "Code": "zho"
+    },
+    {
+      "Name": "Marathi",
+      "Code": "mar"
+    },
+    {
+      "Name": "Norwegian",
+      "Code": "nor"
+    },
+    {
+      "Name": "Polish",
+      "Code": "pol"
+    },
+    {
+      "Name": "Portuguese",
+      "Code": "por"
+    },
+    {
+      "Name": "Romanian",
+      "Code": "ron"
+    },
+    {
+      "Name": "Russian",
+      "Code": "rus"
+    },
+    {
+      "Name": "Serbian",
+      "Code": "srp"
+    },
+    {
+      "Name": "Spanish",
+      "Code": "spa"
+    },
+    {
+      "Name": "Swedish",
+      "Code": "swe"
+    },
+    {
+      "Name": "Telugu",
+      "Code": "tel"
+    }
+  ]
+}

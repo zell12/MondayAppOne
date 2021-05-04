@@ -1,0 +1,15 @@
+{
+  "trigger": {
+    "outputFields": {
+      "itemId": <in_ParentItemId>,
+      "extractedExpenseData": {
+	"Name": "<Name>",
+        "Expenses": "<Expenses>",
+        "Date": "<Date>"
+      },
+      "extractedSubItem": {
+        "SubItemMappingList": "[          <SubItem Mapping List>        ]"
+      }
+    }
+  }
+}

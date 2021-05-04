@@ -1,0 +1,19 @@
+{
+  "trigger": {
+    "outputFields": {
+      "itemId": 841832852,
+      "extractedOrderData": {
+        "OrderNumber": "PO/001",
+        "CustomerName": "Max Electronics",
+        "Supplier": "A-One Electronics",
+        "Terms": "Payment Via Cheque",
+        "DeliveryAddress": "A 204, Shivaji Nagar, Bengaluru",
+        "DeliveryDate": "2020-03-31",
+        "OrderDate": "2020-03-29"
+      },
+      "extractedSubItem": {
+        "SubItemMappingList": "[          {\"name\":\"Asus          16.6          inch          Monitor\",\"amount\":26500.00,\"unit_price5\":5300.00,\"quantity6\":5.00}, {\"name\":\"Dell          17          Inch          Monitor\",\"amount\":46900.00,\"unit_price5\":6700.00,\"quantity6\":7.00}        ]"
+      }
+    }
+  }
+}

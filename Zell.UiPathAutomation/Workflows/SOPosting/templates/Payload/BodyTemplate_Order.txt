@@ -1,0 +1,13 @@
+{
+  "trigger": {
+    "outputFields": {
+      "itemId": <in_ParentItemId>,
+      "extractedOrderData": {
+        "DocumentNumber": "<Document No.>"
+      },
+      "extractedSubItem": {
+        "SubItemMappingList": "[]"
+      }
+    }
+  }
+}

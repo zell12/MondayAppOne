@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp ContentHash="oD0uYOZrqky4Nm5dwVwOsw" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Sales Documents'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0L4aL7sj2SkmXT7NivZkeYA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="668582800860b173483610d5d8a0b7ed.png" xmlns="">0vfz9sKDA8EytWaObmckTgw</imageRef>
+</TargetApp>

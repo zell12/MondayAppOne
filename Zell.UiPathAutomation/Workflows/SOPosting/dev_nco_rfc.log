@@ -1,0 +1,618 @@
+
+**** Log file opened by process 19588 at 2020-10-19 11:03:09 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: D:\01. Projects\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: XPS13-TOMASZ, IP address: 169.254.184.154, IP_v6 address: fe80::b963:137:ac4d:b89a
+
+Default trace level: None
+
+>> Error entry 2020-10-19 11:03:09.969 [Thread 1]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: Connection parameter ASHOST or MSHOST missing
+RETURN CODE: 19
+   at SAP.Middleware.Connector.CpicConnection.parseConnParameters(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-19 11:03:09.973 [Thread 1]
+[NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: Connection parameter ASHOST or MSHOST missing
+RETURN CODE: 19
+   at SAP.Middleware.Connector.CpicConnection.parseConnParameters(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+>> Error entry 2020-10-19 11:03:09.974 [Thread 1]
+SAP.Middleware.Connector.RfcCommunicationException: Connection parameter ASHOST or MSHOST missing
+RETURN CODE: 19
+   at SAP.Middleware.Connector.CpicConnection.parseConnParameters(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 3428 at 2020-10-19 11:17:56 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: D:\01. Projects\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: XPS13-TOMASZ, IP address: 169.254.184.154, IP_v6 address: fe80::b963:137:ac4d:b89a
+
+Default trace level: None
+
+>> Error entry 2020-10-19 11:17:56.619 [Thread 1]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 CLIENT=800 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-19 11:17:56.622 [Thread 1]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 CLIENT=800 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+>> Error entry 2020-10-19 11:17:56.622 [Thread 1]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 13984 at 2020-10-19 12:23:36 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Studio.exe
+Working directory: D:\01. Projects\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: XPS13-TOMASZ, IP address: 169.254.184.154, IP_v6 address: fe80::b963:137:ac4d:b89a
+
+Default trace level: None
+
+>> Error entry 2020-10-19 12:23:36.917 [Thread 15]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-19 12:23:36.919 [Thread 15]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+>> Error entry 2020-10-19 12:23:36.920 [Thread 15]
+SAP.Middleware.Connector.RfcLogonException: Incomplete logon data. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Incomplete logon data.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+>> Error entry 2020-10-19 12:23:54.504 [Thread 15]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-10-19 12:23:54.504 [Thread 15]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+>> Error entry 2020-10-19 12:24:03.866 [Thread 30]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-10-19 12:24:03.866 [Thread 30]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+>> Error entry 2020-10-19 12:24:17.012 [Thread 22]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFRO* metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-10-19 12:24:17.012 [Thread 22]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFRO* metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+>> Error entry 2020-10-19 12:24:33.812 [Thread 24]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-10-19 12:24:33.812 [Thread 24]
+SAP.Middleware.Connector.RfcInvalidStateException: Lookup of function  BAPI_SALESORDER_CREATEFROMDAT2 metadata failed for destination SapDefaultConnectionName ---> SAP.Middleware.Connector.RfcAbapException: FU_NOT_FOUND
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcRepository.Execute(RfcFunction function)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataClassic(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+
+**** Log file opened by process 24172 at 2020-10-27 18:09:01 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Russel\UiPath\Presentations\Videos & Demos\Demo Projects\SAP PO Posting\ProsyncSOPosting\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-27 18:09:01.494 [Thread 1]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 CLIENT=800 LANG=E NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:09:01 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-27 18:09:01.499 [Thread 1]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 CLIENT=800 LANG=E NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:09:01 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-10-27 18:09:01.499 [Thread 1]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:09:01 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 4324 at 2020-10-27 18:11:18 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Studio.exe
+Working directory: C:\Temp\_Russel\UiPath\Presentations\Videos & Demos\Demo Projects\SAP PO Posting\ProsyncSOPosting\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-27 18:11:18.947 [Thread 25]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:11:18 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-27 18:11:18.948 [Thread 25]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=JAN CLIENT=800 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:11:18 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-10-27 18:11:18.948 [Thread 25]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:11:18 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 504 at 2020-10-28 18:26:16 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SAPSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-28 18:26:16.745 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD REQ_DATE_H of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into DATE ---> SAP.Middleware.Connector.RfcTypeConversionException: Cannot convert "20202211" into DATE (yyyyMMdd) ---> System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 5672 at 2020-10-28 22:57:54 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SAPSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.2, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-28 22:57:54.299 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD REQ_DATE_H of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into DATE ---> SAP.Middleware.Connector.RfcTypeConversionException: Cannot convert "20202211" into DATE (yyyyMMdd) ---> System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 25044 at 2020-10-28 23:02:00 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SAPSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.2, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-28 23:02:00.832 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD REQ_DATE_H of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into DATE ---> SAP.Middleware.Connector.RfcTypeConversionException: Cannot convert "20202211" into DATE (yyyyMMdd) ---> System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 40044 at 2020-10-28 23:07:47 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SAPSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.2, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-28 23:07:47.717 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD REQ_DATE_H of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into DATE ---> SAP.Middleware.Connector.RfcTypeConversionException: Cannot convert "20202211" into DATE (yyyyMMdd) ---> System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 10080 at 2020-10-28 23:08:25 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SAPSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.2, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-28 23:08:25.871 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD REQ_DATE_H of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into DATE ---> SAP.Middleware.Connector.RfcTypeConversionException: Cannot convert "20202211" into DATE (yyyyMMdd) ---> System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadataDate.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 31096 at 2020-11-22 18:29:38 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Info entry 2020-11-22 18:29:38.891 [Thread 1]
+Invalid LZ-compressed data block received, ignored.
+
+**** Log file opened by process 11456 at 2020-11-29 10:44:44 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-11-29 10:44:44.981 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD DUN_COUNT of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into BCD[2:0] ---> SAP.Middleware.Connector.RfcInvalidStateException: Cannot convert null or empty string into a BCD
+   at SAP.Middleware.Connector.RfcScalarMetadataBcd.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadata.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 23120 at 2020-11-29 10:53:08 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Info entry 2020-11-29 10:53:08.618 [Thread 1]
+Invalid LZ-compressed data block received, ignored.
+>> Error entry 2020-11-29 10:53:08.659 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD DUN_COUNT of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into BCD[2:0] ---> SAP.Middleware.Connector.RfcInvalidStateException: Cannot convert null or empty string into a BCD
+   at SAP.Middleware.Connector.RfcScalarMetadataBcd.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadata.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+
+**** Log file opened by process 13136 at 2020-11-29 11:05:40 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-11-29 11:05:40.818 [Thread 1]
+SAP.Middleware.Connector.RfcTypeConversionException: FIELD DUN_COUNT of STRUCTURE BAPISDHD1 (SETTER): cannot convert String into BCD[2:0] ---> SAP.Middleware.Connector.RfcInvalidStateException: Cannot convert null or empty string into a BCD
+   at SAP.Middleware.Connector.RfcScalarMetadataBcd.ConvertString(String value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcScalarMetadata.ConvertObject(Object value, Object& currentValue)
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcDataContainer`1.SetValue(Int32 index, Object value)

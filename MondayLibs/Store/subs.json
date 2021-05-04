@@ -1,0 +1,47 @@
+[
+  {
+    "blockMetadata": { "shouldCalculateDynamicMapping": true },
+    "inboundFieldValues": {
+      "boardId": 828568915,
+      "itemId": 0
+    },
+    "inputFields": {
+      "boardId": 828568915,
+      "itemId": 0
+    },
+    "recipeId": 256014,
+    "subscriptionId": 28014303,
+    "webHookId": 0,
+    "webhookUrl": "https://api-gw.monday.com/automations/apps-events/28014303"
+  },
+  {
+    "blockMetadata": { "shouldCalculateDynamicMapping": true },
+    "inboundFieldValues": {
+      "boardId": 815837180,
+      "itemId": 0
+    },
+    "inputFields": {
+      "boardId": 815837180,
+      "itemId": 0
+    },
+    "recipeId": 255505,
+    "subscriptionId": 28020945,
+    "webHookId": 0,
+    "webhookUrl": "https://api-gw.monday.com/automations/apps-events/28020945"
+  },
+  {
+    "blockMetadata": { "shouldCalculateDynamicMapping": true },
+    "inboundFieldValues": {
+      "boardId": 878615680,
+      "itemId": 0
+    },
+    "inputFields": {
+      "boardId": 878615680,
+      "itemId": 0
+    },
+    "recipeId": 255505,
+    "subscriptionId": 28439019,
+    "webHookId": 0,
+    "webhookUrl": "https://api-gw.monday.com/automations/apps-events/28439019"
+  }
+]

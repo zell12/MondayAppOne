@@ -1,0 +1,83 @@
+
+**** Log file opened by process 18548 at 2020-10-27 18:16:31 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Executor.exe
+Working directory: C:\Temp\_Russel\UiPath\Presentations\Videos & Demos\Demo Projects\SAP PO Posting\ProsyncSOPosting\ProsyncSOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-10-27 18:16:31.443 [Thread 1]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=S4H_MM_DEM CLIENT=800 LANG=E NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:16:31 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-10-27 18:16:31.447 [Thread 1]
+[ASHOST=11.11.11.12 SYSNR=00 SYSID=TR1 USER=S4H_MM_DEM CLIENT=800 LANG=E NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:16:31 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-10-27 18:16:31.447 [Thread 1]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host LAPTOP-KD2ME87R with Unicode
+ERROR       partner '11.11.11.12:3300' not reached
+TIME        Tue Oct 27 18:16:31 2020
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3289
+DETAIL      NiPConnect2: 11.11.11.12:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)

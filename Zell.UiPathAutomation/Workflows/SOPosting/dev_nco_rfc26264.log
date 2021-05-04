@@ -1,0 +1,99 @@
+
+**** Log file opened by process 26264 at 2020-11-29 10:53:28 (UTC+08:00 Malay Peninsula Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.20.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files (x86)\UiPath\Studio\UiPath.Studio.exe
+Working directory: C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\SOPosting
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1011
+Hostname: LAPTOP-KD2ME87R, IP address: 192.168.100.18, IP_v6 address: 
+
+Default trace level: None
+
+>> Error entry 2020-11-29 10:53:28.507 [Thread 15]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL) [ASHOST=54.204.119.178 SYSNR=00 SYSID=S4H USER=S4H_MM_DEM CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Logon data incomplete. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Logon data incomplete.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-11-29 10:53:28.509 [Thread 15]
+[ASHOST=54.204.119.178 SYSNR=00 SYSID=S4H USER=S4H_MM_DEM CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Logon data incomplete. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Logon data incomplete.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-11-29 10:53:28.510 [Thread 15]
+SAP.Middleware.Connector.RfcLogonException: Logon data incomplete. ---> SAP.Middleware.Connector.RfcAbapRuntimeException: Logon data incomplete.
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+>> Error entry 2020-11-29 10:53:38.537 [Thread 43]
+Failure to create pool for destination SapDefaultConnectionName (MODIFIED) [ASHOST=54.204.119.178 SYSNR=00 SYSID=S4H USER=S4H_MM_DEM CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Name or password is incorrect (repeat logon) ---> SAP.Middleware.Connector.RfcAbapMessageException: Name or password is incorrect (repeat logon)
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+>> Error entry 2020-11-29 10:53:38.537 [Thread 43]
+[ASHOST=54.204.119.178 SYSNR=00 SYSID=S4H USER=S4H_MM_DEM CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Name or password is incorrect (repeat logon) ---> SAP.Middleware.Connector.RfcAbapMessageException: Name or password is incorrect (repeat logon)
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+>> Error entry 2020-11-29 10:53:38.537 [Thread 43]
+SAP.Middleware.Connector.RfcLogonException: Name or password is incorrect (repeat logon) ---> SAP.Middleware.Connector.RfcAbapMessageException: Name or password is incorrect (repeat logon)
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues(RfcSystemAttributes attribs)
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)

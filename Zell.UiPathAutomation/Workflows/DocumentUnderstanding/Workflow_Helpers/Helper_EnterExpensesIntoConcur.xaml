@@ -1,0 +1,516 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Helper_EnterExpensesIntoConcur" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ExpenseDt" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>760,4849.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Helper_EnterExpensesIntoConcur_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.WPFInteractive.Activities</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.WPFInteractive.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Helper_EnterExpensesIntoConcur" sap:VirtualizedContainerService.HintSize="686.4,4784.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Double" Name="delay" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[in_ExpenseDt is Nothing]" sap:VirtualizedContainerService.HintSize="644.8,209.6" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:BuildDataTable DataTable="[in_ExpenseDt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;File&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;File&gt;C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\DocumentUnderstanding\documents\SampleReceipts\1_receipt_ph.jpg&lt;/File&gt;&#xA;    &lt;Description&gt;Allday supermarket&lt;/Description&gt;&#xA;    &lt;Date&gt;11/1/2020&lt;/Date&gt;&#xA;    &lt;Amount&gt;13243&lt;/Amount&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;File&gt;C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\DocumentUnderstanding\documents\SampleReceipts\2_ExpenseForm.pdf&lt;/File&gt;&#xA;    &lt;Description&gt;tony tzeng&lt;/Description&gt;&#xA;    &lt;Amount&gt;324&lt;/Amount&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;File&gt;C:\Temp\_Dev\GeneralWorkspace\Projects\CSharp\Zell.UiPathAutomation\Workflows\DocumentUnderstanding\documents\SampleReceipts\3_receipt_2.JPG&lt;/File&gt;&#xA;    &lt;Description&gt;dough zone&lt;/Description&gt;&#xA;    &lt;Date&gt;10/2/2020&lt;/Date&gt;&#xA;    &lt;Amount&gt;3232&lt;/Amount&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+      </If.Then>
+    </If>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Helper_ShowStatus workflow" sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflow_Helpers\Helper_ShowStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Message">
+          <Literal x:TypeArguments="x:String">Starting automated expense entry into SAP Concur</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MessageType">
+          <Literal x:TypeArguments="x:String">INFO</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Title">
+          <Literal x:TypeArguments="x:String">Expense Entry</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Double">[delay]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Double">0.3</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Expense Center" sap:VirtualizedContainerService.HintSize="644.8,4035.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="611.2,3818.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DelayBefore="[delay]" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="569.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1">
+              <uix:NClick.DelayAfter>
+                <InArgument x:TypeArguments="x:Double">
+                  <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="delay" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+                </InArgument>
+              </uix:NClick.DelayAfter>
+              <uix:NClick.KeyModifiers>
+                <InArgument x:TypeArguments="uix:NKeyModifiers">
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_2" />
+                </InArgument>
+              </uix:NClick.KeyModifiers>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_14" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="416, 386, 205, 24" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='GatewayHome_ReportTiles' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='GatewayHome_ReportTiles' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQUAAAAiCAYAAABWSMyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK+SURBVHhe7d2/axphHAbw/kXZnPoXdNIlyeQizeSUJWQIuAQnIRBxccpWJOCUbk4SSD2R80ephyIiylHRUDSSSDh4mpo3Tc57m6htl+/7fOCBwL3vbd+HO82d70BE9AJLgYh8WApE5MNSICIflgIR+bAUDDXrN9EtfEIjm0btaAfWUXLx97dCCYP+HPdqHZmHpWASb4rvxSwq0RC+hLdeTzSORrGDiaf2kjFYCoa4aedh761QBsvZS8Bpz9VZyAQsBQNcXyZh6QZ+5URQuxyBFw1mYCkId2On/rIQnhJBw+YVgwlYCoJ5bh6Vbd2AP6d83sRkMl1kcP5Ru+Z3tuNwXHVyEoulINYIzoFmsJdSvhip9cD4Iq5d48tBHmO1nmRiKQh1e5XUD/VS1i6FcAi1K95GSMZSEGmKVkI30MGsXwoPSXzGD7WH5GEpSDQpwNYNsyYblUI4jhbvIcRiKQjkVVKaQdZns1LYQq2iNpE4LAWBdMNdyZXQtYLpu8+fD9y6Ve2abm4/cL6XZUKysBQEGpx9CAxxw1YHN2EHrzyss6Y6SNKwFARyczuBIf7npZDrqIMkDUtBIN3tQ/k4vXgKcjlOfap2AZP641OTgRxHg+fj7YNYLAWJ6unAEP8pm33QGEKjrjaROCwFie6K//krySQ6d2oTicNSEGmO7slqj0lvVAonJdyqPSQPS0Eoz8mu9HTk+qUQwVdHbSCRWApiPVwtnAa/mlzOuqVgnZZwo9aTTCwFyWZVNGL64X6Kdfj4bsZfqR2+USKxFHozdW4Si6Ug3CrvVFgpfJeCMVgKBvDcAuw3rhheTSyBNgvBGCwFU3gDtFLBf0J6Pe9RzhQx5ssZjcJSMMz9sAonsw9rV1cCKrsRVDJ59IZqExmFpWCw2bCDnu+JyCrcIX8IxnQsBSLyYSkQkQ9LgYheAH4CD5VnZD24LV4AAAAASUVORK5CYII=" InformativeScreenshot="9d7435f25ff424e6265bb776ce3abbe1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ClickBeforeMode="None" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="569.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[&quot;Demo-Nov2020 Expenses &quot; + DateTime.Now.ToString(&quot;MMddHHmm&quot;)]">
+              <uix:NTypeInto.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="True" />
+                </InArgument>
+              </uix:NTypeInto.ActivateBefore>
+              <uix:NTypeInto.EmptyFieldMode>
+                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_15" Value="SingleLine" />
+                </InArgument>
+              </uix:NTypeInto.EmptyFieldMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="39, 366, 236, 30" ElementType="InputBox" FriendlyName="'INPUT  Report_27868_TRA…'" FullSelectorArgument="&lt;webctrl id='Report_27868_TRAVELER_ISNEW_Name' tag='INPUT' type='TEXT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Report_27868_TRAVELER_ISNEW_Name' tag='INPUT' type='TEXT' aaname='Report Name ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPAAAAAiCAYAAABho1S2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFhSURBVHhe7d29SsRAGIVhL0WsxYux9opsthHBP9DGWgQLYVsRtrLRrLBZLQVJtkjIDwn5ZAIG14zY6Rx4HzjVbvsyqWY26ro2xpjmCJgx4REwY8JbC/jt7t4eJgc23Z/Y5eGJHZ2eM8YC2PHZhV1d39gifvEH/H47tdnm9trSNLXVasUY++clSWJP0byP+WvEQ8CPu3ujgIuisKqqhj8zxv5+rsGyLC3Pc4ui5/4k/vxtCHi2tTMKuGka67qOMRbAXI9ZlvWf0+OAv8Xr1ratAQiDi9idxu4zmoABQe4UJmBAlGuSgAFRBAwII2BAGAEDwggYEEbAgDACBoQRMCCMgAFhBAwII2BAGAEDwggYEEbAgDACBoQRMCCMgAFhBAwII2BA2M8Be66VJWAgLO5SO++1sr6L3QkYCMsiXvovdvc9rULAQBjcndDx8rX/fPY+reLG42aMhblfHzdjjKmttg8Q2jkEeaR4CQAAAABJRU5ErkJggg==" InformativeScreenshot="9f13739fff9b18292d0398df9428fe86.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="39, 346, 82, 18" ElementType="Text" FriendlyName="'Report Name'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAWCAYAAABaDmubAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH6SURBVFhH7ZXRbcQgDIa7U9ZigHaH6CaJbpCTMkWl7JAnio0NxvGF3DVElcrD/xBszO8PH/exrqvvOl8dbCN1sI3UwTZSB9tIHWwjdbCNJMAufnKDHwZDbvKL2HSpHuPO+eTZisO+YfSzXr9IG7Djo0xI5m+zWr9IR8CGy3f3pYz9fbBBG5O5IT3Ry93hJcy3HNc1MYf3yrrfk3eh1sR7vz7tvCTyfAN/zk/fIqY9Q+1UCyTyMRZycQ/FYZCKPcf6Z70BNubJCUGINNEMLcXJHNeN8Wyy+KbcYvrg7MrEQm30IPOkZ+UhgeF8Bsi/ygTU6nm/f9brT4HZ6OxHmgAEpeL5YMjTZwij2JAxeQfAcu3UcDEMWxU+N+du4WE+9FDpn9eO/XmJ24gTZuRIsOr2UhMWuCAA/3uwQQiT9ptgI/zkuQJWDgD3Veuf83cnNhYpNyRI9K3FBjZrV4ANSk9CATYD5Sks+ngV7E7/rOpTgEblzZuTkGUdfM1TwKInwQUf7NOo8S7YWv+sA28s3XYyFvOKqRSHoQEJT5mO8Wys+D4FbBD6EQOhYXD8HbCV/nntANggPFgWU2+VBuVGP8LhFNc1Gb7ea4JNZ+l10HPP+pcWv0kAFGFQzZfAwvfz/lkC7DmKYJ9N2P9RB9tIHWwjnQ62K6qDbaLV/wBi1cfTqcBjpwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Report Name" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+                        <uix:Target.FullSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_18">&lt;webctrl id='Report_27868_TRAVELER_ISNEW_Name_label_cell' tag='LABEL' /&gt;</Literal>
+                          </InArgument>
+                        </uix:Target.FullSelectorArgument>
+                        <uix:Target.FuzzySelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">&lt;webctrl id='Report_27868_TRAVELER_ISNEW_Name_label_cell' tag='LABEL' type='' aaname='Report Name ' check:text='Report Name' /&gt;</Literal>
+                          </InArgument>
+                        </uix:Target.FuzzySelectorArgument>
+                      </uix:Target>
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DelayBefore="[delay]" DisplayName="Click 'Next &gt;&gt;'" sap:VirtualizedContainerService.HintSize="569.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None">
+              <uix:NClick.DelayAfter>
+                <InArgument x:TypeArguments="x:Double">
+                  <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="delay" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4" />
+                </InArgument>
+              </uix:NClick.DelayAfter>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_16" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="1786, 1006, 61, 24" ElementType="Button" FriendlyName="'Next &gt;&gt;'" FullSelectorArgument="&lt;webctrl id='ext-gen224' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen224' tag='BUTTON' type='button' aaname='Next &amp;gt;&amp;gt;' check:text='Next &amp;gt;&amp;gt;' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAcCAYAAAA+59JsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALHSURBVFhH7ZhLbhNBEIY5iT0eg7gSV4CEQCBv1uYM3ACblx1DeAUCGyKPFbGJHVB6Y7LCsRFKgixNNkVV9cNte3o0CNj0pKVS+e+q6u76ZkaJ+lIcx5B3u4CANgHhc+8HXHuwB1fvfYTy+gfvjPqi/qhPu28DgQJXNmTy5Y1JCL5p6tMGYSAQofL6jkr031O/MxD4E1jbgXDtfS489TsDgQiFq++gjJYLj/0mQiivbkO4sp0L74QQrrzNjbkhLL+B0tJr9uGy9L5qN4SlV2wl9pjs1F9gdwQAoyHcN/GvPCfaWeqndHMIJ/ALaq74f9CpEEp3X2bwCgIO0dbzcm6s/8C3z3ClM4aQKf8feCeE0p0tTLLMqQ+44RMxBEGHt+ZEW+Vs0tPVQ+VEqlnOP8JaWuMnex79I7W+sol8NLO/rBWR1soyn38rDcILCBafs9eWrDWEA6iIc/Z6TkQUp0Oew25D5lMON4j1Ol97Xk83m7jfNwPJ5KtYra8C+FlWTP50fbJ2Q6AEtGCxaX4n666C0EXdhU8jbEDNEYSgMbDeAj0oR9ZX6fCjAVT0ehqC1o79GSbXTcV5P4KeXm/rFAhNCG5vZvDUuITAmproDxQE1HyoU2wqqb7DeWDHGYIr334T1H4qPn4TEMxMXbp3QghuNTDJMqfuSAiHHRPjp4tDRKR7fHAdN08Q6+VngPPRKcD3nqyn3wihOr1fS81rbeJyfdHSWpnzvLM6FUJxoY5em0vvGwgmXj/mT0C0JrUc1GAdKocE4xhh2Gvsj3MRSrb9/167ISw8Yysq77NOgfAUijef5MI7IRTnH3NSHnwqhMLcI5k8L72vOhECXTJw4lzNf8M+Ey9V6LqJ/n4WblQxsYr+ofL+aeoz8XpNX7TSPxOUSEWF62g+eeyL+nNetGoQRIjvG/Gb8c2oL+rPBkA2ASGvdgEhjuE3B0NEXbDS1QIAAAAASUVORK5CYII=" InformativeScreenshot="f5c2ce2c217d18d49ebaa4ee4a49b021.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image" Text="Next &gt;&gt;" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1853, 1006, 56, 24" ElementType="Button" FriendlyName="'Cancel'" FuzzySelectorArgument="&lt;webctrl id='ext-gen226' tag='BUTTON' type='button' aaname='Cancel' check:text='Cancel' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAcCAYAAAA9UNxEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEjSURBVFhH7ZIxDoMwDAD7El7XhV/wA2Y+0AkxsDGzRGLiCyifyOTGSUgcFCFRVdAGDyehxMQ+2w+lFNwJFs4dFs4dFs4dFs4dFj7EMsKzfEHhePYyHfd1ZqjLDtoldbfP58LToCVpUgltdZb0BcKiScgtEoTGfJuGhOnXE8bYptRNuLPn+C/ZlmoE6d6Ufedji2a2secLY0JSbAIxrcW5ok2xVngt3JwbuXg7fDOxaV7eNcvkPF2YJt+BTpkI+83wQmmBaLrROz+z0riWA4h1km462wkfEnbbEHOBsJ0eTUpl6AY4+V3h+BybaeKjHDTmCmHEFORWTeNFNGEddWF9WiwI4z8osb6FW7J9R+OnfZXwH8LCucPCucPCucPCuXMzYQVvTdMUIiDgxMwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Cancel" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                        <uix:Target.FullSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_5">&lt;webctrl id='ext-gen226' tag='BUTTON' /&gt;</Literal>
+                          </InArgument>
+                        </uix:Target.FullSelectorArgument>
+                      </uix:Target>
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_ExpenseDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="569.6,3041.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,2891.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.4,2796.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="txnDate" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick DelayBefore="[delay]" DisplayName="Click" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.ClickType>
+                          <InArgument x:TypeArguments="uix:NClickType">
+                            <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_6" />
+                          </InArgument>
+                        </uix:NClick.ClickType>
+                        <uix:NClick.DelayAfter>
+                          <InArgument x:TypeArguments="x:Double">
+                            <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="delay" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                          </InArgument>
+                        </uix:NClick.DelayAfter>
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="860, 766, 270, 18" ElementType="Text" FriendlyName="'Office Meals'" FullSelectorArgument="&lt;webctrl aria-role='option' id='etListSearchItem_12_1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' id='etListSearchItem_12_1' tag='DIV' type='' aaname='Office Meals' check:text='Office Meals' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAWCAYAAAAM0ROBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHvSURBVHhe7dhNboMwEIbh3olDtZtwhe66RagXgZNELLLqCSLlDi5jPHhsfhrZrdTF+0hIFMyYzXwd8uIAoBJBAqAaQQKgGkECoBpBAqAaQQKgGkECoNppkEx945pGj9YN93BD3AfX6vWbnr+599fGddewpsjDDZed/dzkOtnjMswrCly78mcBnDoMEh8itvGkEU1zP8bWNf20Oa+3BEl7aV07mrb3+xMkwH+0HyR+2sgnghAuEhja1PPRfn7E8/HLh4BOJHaiiVNKmCz8sd1Dg6Qb53cw4SS1uj4NA1s/ho5ONOHQ9SZIfPDl9wEU2w8SHxTd3PKZvBk3E0kIAQkNW8MHk5yb+8LUi3SNBI6+Qzg/2H+5H0LpPrlpDSdzfX3WXMvfB0CRPwuStNGVNLGZFvyRTyWxhp9CNJSkltnfTiN67E8leZCYZ8PfAOqUfdrMyoNkWzdlpoQQIEmgmDBIfkNRsmYOCb9+dyJRMWx26wB42i//2JqFQPJpI8+G5tWAsWtWpkYIAvnhNQ8Dv2fy6bMNm+Sd1+uyNu55GEgAnnYYJGJp1uW/dv4J8mOQ6PXwfGzWpen3ai7SGkmg2ZCY+Xtn9fshDbYkYMIaUw9AmdMgAYBnECQAqhEkAKoRJACqESQAqhEkAKoRJAAqOfcN5JtUuNRu3RsAAAAASUVORK5CYII=" InformativeScreenshot="599904066882a68b070465388d3ed333.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image" Text="Office Meals" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,655.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch.Try>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,424" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[txnDate]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[row("Date").ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="[delay]" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[DateTime.Parse(txnDate).ToString(&quot;MM/dd/yyyy&quot;)]">
+                              <uix:NTypeInto.DelayAfter>
+                                <InArgument x:TypeArguments="x:Double">
+                                  <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="delay" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_5" />
+                                </InArgument>
+                              </uix:NTypeInto.DelayAfter>
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="767, 366, 155, 24" ElementType="InputBox" FriendlyName="'INPUT  Expense_5734_TRA…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate' tag='INPUT' type='TEXT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate' tag='INPUT' type='TEXT' aaname='Transaction Date ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAcCAYAAAB/P22WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGnSURBVHhe7Zy7TgJBGEb3UWxN7IivZOUDWNpaWZtYGApaH8DGa1TQiBdA8FYwFDa8ACG/8xEguw7ES3Z2m3OSkxB2tzvZmb3MJr2PvnXenbXenD28Omu+OLvtOWt4611n1/LZ2RXiH1Q36qfhVU93vqt739eT76zte+v67hKFpz+afoN20gE6+KLj7Lw9sFPZGthJymPEb6b7kOrmzKuOLqcx3vi+dHJ7nAaYzMLThqPdqtV2arZdbdrG4SdiFPf2DyYmGmonZ7zNLauvrM0dDoeIuav4Zr8TnQY11NZX1zPxjUYjG4/HiLmppjLx6aynOV46PKmdAfJETWXi01xPk0Lig9gE8WnI1VUt8UFsgvh0CazL4p/iq1Qq018A/yOMz8/3dB+P+CA2QXy62NBNQeKD2BAflAbxQWksjE/P5ogPYkN8UBoL42PYhSIgPigN4oPSCOLjJjMURRgfj9egIIL4eLEAiiKIj1eqoCiC+HiZFIoiiG/Za/TEB3kTxLdsARHxQd4E8bF0Eot2vnSSReOYh+k+5K8WjfO5DIyhulE/yz+X0bcvuTHFtsIxhAgAAAAASUVORK5CYII=" InformativeScreenshot="95067b272d25e90802c54f6e1ac01ddd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="767, 350, 83, 14" ElementType="Text" FriendlyName="'Transaction Date'" FuzzySelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate_label_cell' tag='LABEL' type='' aaname='Transaction Date ' check:text='Transaction Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAASCAYAAAAuXUKzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMdSURBVFhH7ZNpTttQEMd9J+y0SFwHBxCXiHHgEGxOOQQQFrVVK3URJDhlX0PMOaazvLGf7YSEqhFf/OEnPc+b+c9/Ji/O82AAFdOhWu4UqZY7RarlTpFquVPELDeGrfkZmJkp40dxqeg9OAjVi3gN2sPzJqa7DX5x3vltiIflFsi8DL9Xyi+XmwZwUIy/K7LQ//pD85w+bHWzGC1t/IIn9zLBcg8hQBNB6OOvK3E2kf7iJrcdoLEAAv0HWCZz+eGh0S38W9J8Oy7DxxH11u/8y83urIFf8ZIyZLk6q8aGzZn3ojr5HNV7dbl9Bhu6LhvX7wMcTM40qMuD9mkgt84NtYbjpOeqHsVNThd1ODcfP4vqvIwzivOS6Cx9xEOxp609xgvnGdiX5iiWNtYNnTPnxZoH89g7Ph7V4+XqB9ONsOkKtNMYCXglc+3QwwEEGWgFz1oXw6avNXLmXKuxYN2hyU00SbrZD5nP0+WqdnGYtHakFwueU3pm8XJuaU7bC2tk90K2OycTNlCBhwnPA3hijiDwaizM3x26r7H40zM1MnftEFwvNHVWvKDjqhbnaw7dLcBmB4dpqrZdK3rFnt1oAdzmUZqX1o71gvAc0jOLZz5Gzml74RztU0aWawUeOy3wayHs4/mBOYJG7SM0UPihj9D9hybspedZuWs3wdN4vwcbdROnnHoLOsU45Wuca5dgA4fqREuFOGlKnR/1yhppT/Q5zgt/G9i79NTYXnM26z1qzpwX6SnngnfE4YUapOkn8D+uwi6e75hjaMzOQWMfz09ED9YX58DDmLe4A+urc+C3enC3v4axNdi1crTmpLUs+cTqsdERXYmhjpW/i5qan48tw/rpaG32QdqveEk53QHf1KXgPCdpzog58S7zUtTRnoKjS703y7zFIHFDPA7gusBVxcQ4tFhdKi3z6jGBy4cELpBz4j6BPxX/hEPPl14pLZUWSsEYObtLoEvcJtAxnFa8CYdeK71UeqGxWebJTQK/kV/XCfwkrhL4UfFmHFosvVZ6pbRUWihdfL9M4NvFC3wlzl/gi8Xnigl4gb96fYDRh0EFewAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Transaction Date" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+                                        <uix:Target.FullSelectorArgument>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_17">&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate_label_cell' tag='LABEL' /&gt;</Literal>
+                                          </InArgument>
+                                        </uix:Target.FullSelectorArgument>
+                                      </uix:Target>
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                          </Sequence>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <Sequence sap:VirtualizedContainerService.HintSize="375.2,424" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[txnDate]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM/dd/yyyy")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_7" Text="[DateTime.Parse(txnDate).ToString(&quot;MM/dd/yyyy&quot;)]">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="767, 366, 155, 24" ElementType="InputBox" FriendlyName="'INPUT  Expense_5734_TRA…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate' tag='INPUT' type='TEXT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate' tag='INPUT' type='TEXT' aaname='Transaction Date ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAcCAYAAAB/P22WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGnSURBVHhe7Zy7TgJBGEb3UWxN7IivZOUDWNpaWZtYGApaH8DGa1TQiBdA8FYwFDa8ACG/8xEguw7ES3Z2m3OSkxB2tzvZmb3MJr2PvnXenbXenD28Omu+OLvtOWt4611n1/LZ2RXiH1Q36qfhVU93vqt739eT76zte+v67hKFpz+afoN20gE6+KLj7Lw9sFPZGthJymPEb6b7kOrmzKuOLqcx3vi+dHJ7nAaYzMLThqPdqtV2arZdbdrG4SdiFPf2DyYmGmonZ7zNLauvrM0dDoeIuav4Zr8TnQY11NZX1zPxjUYjG4/HiLmppjLx6aynOV46PKmdAfJETWXi01xPk0Lig9gE8WnI1VUt8UFsgvh0CazL4p/iq1Qq018A/yOMz8/3dB+P+CA2QXy62NBNQeKD2BAflAbxQWksjE/P5ogPYkN8UBoL42PYhSIgPigN4oPSCOLjJjMURRgfj9egIIL4eLEAiiKIj1eqoCiC+HiZFIoiiG/Za/TEB3kTxLdsARHxQd4E8bF0Eot2vnSSReOYh+k+5K8WjfO5DIyhulE/yz+X0bcvuTHFtsIxhAgAAAAASUVORK5CYII=" InformativeScreenshot="95067b272d25e90802c54f6e1ac01ddd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="767, 350, 83, 14" ElementType="Text" FriendlyName="'Transaction Date'" FullSelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate_label_cell' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionDate_label_cell' tag='LABEL' type='' aaname='Transaction Date ' check:text='Transaction Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAASCAYAAAAuXUKzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMdSURBVFhH7ZNpTttQEMd9J+y0SFwHBxCXiHHgEGxOOQQQFrVVK3URJDhlX0PMOaazvLGf7YSEqhFf/OEnPc+b+c9/Ji/O82AAFdOhWu4UqZY7RarlTpFquVPELDeGrfkZmJkp40dxqeg9OAjVi3gN2sPzJqa7DX5x3vltiIflFsi8DL9Xyi+XmwZwUIy/K7LQ//pD85w+bHWzGC1t/IIn9zLBcg8hQBNB6OOvK3E2kf7iJrcdoLEAAv0HWCZz+eGh0S38W9J8Oy7DxxH11u/8y83urIFf8ZIyZLk6q8aGzZn3ojr5HNV7dbl9Bhu6LhvX7wMcTM40qMuD9mkgt84NtYbjpOeqHsVNThd1ODcfP4vqvIwzivOS6Cx9xEOxp609xgvnGdiX5iiWNtYNnTPnxZoH89g7Ph7V4+XqB9ONsOkKtNMYCXglc+3QwwEEGWgFz1oXw6avNXLmXKuxYN2hyU00SbrZD5nP0+WqdnGYtHakFwueU3pm8XJuaU7bC2tk90K2OycTNlCBhwnPA3hijiDwaizM3x26r7H40zM1MnftEFwvNHVWvKDjqhbnaw7dLcBmB4dpqrZdK3rFnt1oAdzmUZqX1o71gvAc0jOLZz5Gzml74RztU0aWawUeOy3wayHs4/mBOYJG7SM0UPihj9D9hybspedZuWs3wdN4vwcbdROnnHoLOsU45Wuca5dgA4fqREuFOGlKnR/1yhppT/Q5zgt/G9i79NTYXnM26z1qzpwX6SnngnfE4YUapOkn8D+uwi6e75hjaMzOQWMfz09ED9YX58DDmLe4A+urc+C3enC3v4axNdi1crTmpLUs+cTqsdERXYmhjpW/i5qan48tw/rpaG32QdqveEk53QHf1KXgPCdpzog58S7zUtTRnoKjS703y7zFIHFDPA7gusBVxcQ4tFhdKi3z6jGBy4cELpBz4j6BPxX/hEPPl14pLZUWSsEYObtLoEvcJtAxnFa8CYdeK71UeqGxWebJTQK/kV/XCfwkrhL4UfFmHFosvVZ6pbRUWihdfL9M4NvFC3wlzl/gi8Xnigl4gb96fYDRh0EFewAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Transaction Date" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="[delay]" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="436.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="Business Meeting">
+                        <uix:NTypeInto.DelayAfter>
+                          <InArgument x:TypeArguments="x:Double">
+                            <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="delay" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                          </InArgument>
+                        </uix:NTypeInto.DelayAfter>
+                        <uix:NTypeInto.EmptyFieldMode>
+                          <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                            <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_7" Value="SingleLine" />
+                          </InArgument>
+                        </uix:NTypeInto.EmptyFieldMode>
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="974, 366, 189, 24" ElementType="InputBox" FriendlyName="'INPUT  Expense_5734_TRA…'" FullSelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_Description' tag='INPUT' type='TEXT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_Description' tag='INPUT' type='TEXT' aaname='Business Purpose ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMEAAAAcCAYAAADY4tttAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD/SURBVHhe7dw7CsJAGEVhl2Itti7Mzt7KUhBRULAQfIAbENFewcoVmCY26RJIQvLLWIjxtYC554NbpsshaWZq1yAwxpRHBEx+lQjO/aEduj1bDkY2nswY827T2dy2u/33CC7tjh3rzeeiKGLMu4XhzRarTSWEZwSnRqsSQZ7nVhQFY14tTdNHDO6L8BHBawBu7gHAN2VZWpZlj18jIoAs924TAaQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeQRAeT9jOD9eCURwFdxHH8/Xvl+0J4I4KMkSWyx/nHQ3o0rV5jv+3vlCmOqIwImvsDuRapkgCOFoYAAAAAASUVORK5CYII=" InformativeScreenshot="2d8fccb05545b9bf0156a2743e58329c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="974, 350, 89, 14" ElementType="Text" FriendlyName="'Business Purpose'" FullSelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_Description_label_cell' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_Description_label_cell' tag='LABEL' type='' aaname='Business Purpose ' check:text='Business Purpose' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAASCAYAAAA5f9J6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHmSURBVFhH7ZXhjcMgDIVvp8yUDII6R9MJboC2Q1QZoRmEA4ztBwlcrmqb6sSPJyUGbL8PN/26z7Nteq8a9B3UoO+gBn0HNeg7SKHfRjt0ne1Q/Wgn2LxZZ/P42Uflaz6r/xcrgz7Y440XJ3vsO2vO/P7hCtCNvUiM+h9OU7rvA7QR+tUaNzl8AdNpsN3hqs/5ZMmkxxwHnUK9RMpJcaib/OI0fjlwzCnWTrSADn0ma7mvwfXnPRj7HfaPYX1RB39JEkcPG7xFVT8vOiUl6NQ0JQUzGXRuMpzDy+AmZT/B5bpSJ/TG0LAmaAGdaoRcVehZPckNnpOB1LzKwcUzz2veqK8Nk04NlaDDBGLirAE2pXHKhxcsZgMgeA85KU+Is8lccg7EPYW1MvQ1X14yANJ3tg8GVSDXvMXzFejYRL05hJI2WYOe1soVaviGwSwaUpNRCdja2hOhx3fK7/vyNX73tnHSl896GWp02WQJOuaI8ZjH5xCgvN/3Jqbp7J+go7c4nUXokgPWEjbqye8Xb2GPP1v2xv1Uv+mL2w3x+MeTJM32M6widJ+TTHFOvez1uNZ3wilj1aAzCH+2N9bIpa1A7x3ItTroU+KQ14nzlL2RFHpThK6D9io16KAG/R+rQd9BDfrbNdsfubMO8mES4Q4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Business Purpose" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[row(&quot;Amount&quot;).ToString]">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="1595, 363, 103, 24" ElementType="InputBox" FriendlyName="'INPUT  Expense_5734_TRA…'" FullSelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionAmount' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionAmount' tag='INPUT' type='text' aaname='Amount ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAcCAYAAABmmEF1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADtSURBVGhD7dqxCoJQGMXxHqU5WnuwtvamxiCioMAhsIJeIKL2gqaewLvY4nYFFf3iOkjXtPV64PzhjE4/dPHrBUoJhzFiAc3Ces6XcpvOZL9YyXrjcQ639XZyvlybsV7jidz7w2pRFHEOF4Zv8Q8nC6zCegxGFlaWZZLnOedoSZKUaOYN+8H6hjIzDzB3FUUhaZqWn0RiAWQMiAUSsYAiFlDEAopYQBELKGIBRSygiAUUsYAiFlDEAopYQBELKGIBRSygWrHqv/WJ5T6tdfNv/frBDLHcFsex+MeWgxkznqJ1Z39P0bjuj1gwU/IBbB00Qs2fPxgAAAAASUVORK5CYII=" InformativeScreenshot="4f76192d879b4b47154cc6cc0ddff745.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1595, 349, 38, 14" ElementType="Text" FriendlyName="'Amount'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAASCAYAAAAt6kybAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE7SURBVEhL7ZRNasMwEIVzlB4gO53J2nfXtZJNl4FSEgi2lz1DbOg+ixJMTxDvfYWpZjSjn7qNDTXBBS8ekZ+k0acnKatr28J/0AI6tRbQqdUHvRSglQJz+ubfU8RgoIq8HmhTatBbY1Un/l11MqBugzaQZxryi/yKX4NR9rvEAsoK+9DDtgJdNtF857kxwfNjECIroLFtDEXZUKSOonBCXfftGFJQjJw7KVkPwJO5r9piIbdjWowXJl+K+1QGQCU5Om7e3FCiONHfTZzIBQVU+lwSERCNc0DhbvMp0OncAE3WGAUaRe4lxzcn0KiAeAFoDOhvR5/61P4LKBYId5Ll/ybGgf78mHgMebaGfTyDoLRu2BwqfUwz1gI6tRLQj90rvG+e4e1lD4djOSt50M/HJzg/rL26rpuROvgCGp7pP3GjZv0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Amount" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+                                  <uix:Target.FullSelectorArgument>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8">&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionAmount_label_ce*' tag='LABEL' /&gt;</Literal>
+                                    </InArgument>
+                                  </uix:Target.FullSelectorArgument>
+                                  <uix:Target.FuzzySelectorArgument>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_19">&lt;webctrl id='Expense_5734_TRAVELER_P1307_ADJAMT_HD_TransactionAmount_label_ce*' tag='LABEL' type='' aaname='Amount ' check:text='Amount' /&gt;</Literal>
+                                    </InArgument>
+                                  </uix:Target.FuzzySelectorArgument>
+                                </uix:Target>
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Click" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None">
+                        <uix:NClick.MouseButton>
+                          <InArgument x:TypeArguments="uix:NMouseButton">
+                            <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_9" />
+                          </InArgument>
+                        </uix:NClick.MouseButton>
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="1749, 1001, 94, 24" ElementType="Button" FriendlyName="'Attach Receipt'" FullSelectorArgument="&lt;webctrl id='ext-gen642' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen642' tag='BUTTON' type='button' aaname='Attach Receipt' check:text='Attach Receipt' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAcCAYAAACajWq/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKZSURBVGhD7VqxbhsxDO2/ZOsXZMuW3+gnBF4MZOhHHDx46NgPCG7wVqDo1KUwEM+d6iCAkbFDhgBW9SiRR91JhS+R7UPL4cECRVLUe+TZwPndr+3WGc4PE2IiSIT4sv7pPnz64d5//OYubr8ajgBwC47BteZehMAGnD5/f3C/n1/cfr83HAHgFhyDay2GCAGV4JALNtQHuAbnAyGgkE3C6QCuwflACDy/cgGG4wGcmxATgAkxEZgQE0FFIR5dO792l8t1Yn9a3YhNr8dh7Zqra9fc5/Y6bJb+fO+XYN66p4zv64Fably7y+1F7Fo3u1q4TW6vgHpC4PD5wjUeugAiJ5Kv1+MwQogk/2Fx1XG/8E1wJiHQ7bPVo3ySnQoKndncqTUREyco2rrO1XbuvEjoknPkOzInNGxST8wzyEEdHO1qgmiC2S55eSJCnc2qiw33UmeMaLpKQqCo2AE0Gd1lihOxW7uNkMmXi5fneAhJ63i5XB6FoT3EaeFlOiR3sLNYIpzs92NTIZJaeQr0+kDUEQLkCwEosOu2ohDi623UQSFGiBAfQBNa/q6h/JRLQfyimAlwJhOb5kqmgUG5UiFEWLH79bmEyBGgOywrBBXb77IKQvSIzxKlYkr20hmd/+SEyFxE/Wr4qxDJWIccg0cT5cEZY4XwoDq4tjh9+nzKHeyDxlE1cWzwSYUY5uutD8TbhcCh8ixldN3CI95fhwv5iwDLVvwRT2TEPe3L+wcL4RHOZELVmWLr2zsCuV6C5E2FmPnHMPtwffLln6mxhAoT8b8inaS3woR4NUyIfxImxESQFcJeDJ0WxRdD9qr0tCi+KrU/D5wG4BYcg+vsnwdYDKgEJzy/DPUBbsGxFgFIhDCcDybEJLB1fwAtONk/Yd7n8wAAAABJRU5ErkJggg==" InformativeScreenshot="c4fa865b8ac01d840ee43017afd5c3e3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image" Text="Attach Receipt" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ClickType="Single" DelayAfter="2" DelayBefore="[delay]" DisplayName="Click 'INPUT  ext-comp-1467_Fi…'" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.ClickOffset>
+                          <uix:ClickOffset OffsetPosition="TopRight" OffsetX="-39" OffsetY="14" />
+                        </uix:NClick.ClickOffset>
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/Expense/Client/default.asp" DesignTimeRectangle="994, 336, 261, 33" ElementType="InputBox" FriendlyName="'INPUT  ext-comp-1467_Fi…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='file' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='file' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQkAAAAlCAYAAABRcRydAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASZSURBVHhe7Z3LchNHFIbzJJYvlUV4EN4lBOyYEGJTbJUNvEOWSBAjcQmXQJxNTNneZIFtUp4swNogzEa4ygs2zfnP6Z5bxmI0NqlS1z9VXx390z3do1Onf7WsKs9XB4OBI4SQk6BJEELGQpMghIyFJkEIGQtNghAyFpoEiYZf1vfc+Rt/ua+v/ekWVkldkC/kDfmryitNgkTBavdvd+76upu/+kx46uZ/zEH9eS15Q/6Qx3JuaRJk6sEn4Lnr1Z+SZDKQx/KOgiZBpp7zNzfcwsq6FLnsJHykbqYRkc98fmkSZOrRv0Gs/EHOCOQzn1+aBJl6sE2e/+m5WxA0rvhI3UxLPvP5pUmQqcdMAn+wfCaFLjFAPbFGpEmQ6FCTuPq7WxAQA9TNNE2CRIeaRP4nPXIqaBIkOlDUc1eeSIE/8fFpTf2Pe3HsKo9ku871cWqaBIkO3UlceSwF/njC+EpNItkund8+Epv46F7cP+m6uCNNgkSH7iR+eGSFrvFRTR1Motw+cIk3CejuUPok791I9xg4j/7okx2j5JVdrwZz5LrpeNYPc4Txf/73o+9fHMMNB35+ux/0y47sfuq/v2aaJkGiw0zitwbseZMoncdCHx6kGiZhCz/0OdDFPUr2KjRey4K+5/uqaeT7Yk6029zF85luJ2IQx+9dW9vCOPl7+HLQJEh0oKhnLz90cwEp9HraFmblgQXq+6tJwDS8Thew1zrell/Evr8udt93NDxyo9C/LzsSfV00heL9eaPpB23t6bgnvp/Ta0SaBIkO3UlcfuDmlgXEwGf1ri7UZCtoH/uH+tUinDeTeJO2l3V2DUzigZmItmN8LPY3suilTfqraSS7do0aiz+OD127NH/VkV4L8vOfoaZJkOjQncTyfS3yyeKu2/AmUW7veCOAzptCldboTaIDHQxjOTMHjId5OkOYRmm+vClgXNUV/f6nSJMg0aE7ie/vudkc9fSON4n/ttvWfkdfp4bh2+zrhnzyew3mtj5Ipw+uo3pHdxAbiZzz19kO4tAl/rrK+0nHgLnYfRXac3wpjUiTINGhO4mlvhW8RC34WjoziUJ7zz7JN3qmdefw9nXuelvEaiKVWozlrZzAuf0dm28TBpDTSzZ3pvtmRjIPdHsfv2yIYfjxZpdem3FsBt3k/dbTNAkSHWYSPY8Uu1JHv9SFWnUkm1l/XfAwicL1tmjDMdp/WWxXU4DRFPtjkZuWvr132dcMHMfvXDtcL+3BaMJh94S2YDCYEzqM7dt1bhhM/n7xuo7u0SRIfKCoW4t3tcBbi1bo1E31XZoEiQ/dSUhxa6Evrklco26saRIkQnQncUkKXWhd+tUKn7qhXqNJkPgwk7jjWhcFKXqDupm+Q5Mg8aEmcfG2FXkKdTN9myZB4kNN4jspcnIm0CRIdOAft85ogXfdzIUu42mi5JH/CJdEB54+hZ/vZi50XEtADFBPppFH5DOfX5oEmXrwMJlvrj2XT0Ip9G9vSeHfYmwSJX/IIx/OQ6KEj/k7pZa88TF/JHrwCYinT+nDelZJXZAv5K28gwjQJAghY6FJEELGMHCfAOYAjScpdAmJAAAAAElFTkSuQmCC" InformativeScreenshot="b43bc83c295ba48ed3e3e317969686dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1262, 337, 66, 30" ElementType="Button" FriendlyName="'Attach'" FullSelectorArgument="&lt;webctrl id='ext-gen863' tag='BUTTON' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAiCAYAAADiS6/IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH4SURBVGhD7Zk9a8MwEIb7//9Iu3Xp0K2lWwuhNJAhHULzZTAkIcQk69XvybL1daYJCbj2DS9IOlnW++gkg3W3WC5JFUvBCFIwgpJgRt8revpc08PHmu7f+y14hFd4dhlEYN4mK3ocren5K6OXSUavPRc8wis8w7vl4IEBNXQYApBQ8AzvNnM8MEgp0Es9OATBOxhEYLDfhpgtVvAOBhEYHEapB4YkMFAwCSkYQQpGkIIRdCMwe1rsT5TvDjQOY1nhtY/zI+Wbvd/nAvE4qfddqJuAMWYLhrPIgvhwwWxptjNAppsya1zTgIJMYhX0AzO2bk3ND5TVfaAjzeZ27Die5VtuN2DKxSjfHcYu0fXB8MQLmqLMIKqyVVvGVKabLDOQm/5mizbxps7juDF+dwD1DF0djJ8lxpi3cmduJXeLuOW2fqYthHiergwGk/FXKZrwn8BUh7dV1T/amo46DYYn5xpy5KW4CKYB4p8d/xpMYts47bWhNjBBrI5XbbH5dD/T1hUwfHAKhx0MuwdyGxj3sOZ6CbXuH5ptFqOzYDjNhdW0kzTZZMr1F6P+/BogPA7Xq/EYjgM8+FxbqN3NmJ5JwQhSMIIUjCAFIygJRn+GCz/D9fpEuD7RCzfhwg3SK1rDIQIDgRpSCvsNh1GfBY/wajPFKglGtaRfDW+37G56/hcAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Attach" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                                  <uix:Target.FuzzySelectorArgument>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_12">&lt;webctrl id='ext-gen863' tag='BUTTON' type='button' aaname='Attach' check:text='Attach' /&gt;</Literal>
+                                    </InArgument>
+                                  </uix:Target.FuzzySelectorArgument>
+                                </uix:Target>
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'Edit'" sap:VirtualizedContainerService.HintSize="436.8,135.2" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[Path.Combine(Environment.CurrentDirectory,row(&quot;File&quot;).ToString)]">
+                        <ui:SetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8406d96-8787-45f4-af6e-c5669eecc8da" InformativeScreenshot="8309c8e2cbb460a26840833fb197166b" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SetValue.Target>
+                      </ui:SetValue>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,320.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="HardwareEvents">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="201, 970, 1474, 15" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;ctrl name='File name:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;ctrl name='File name:' role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABcYAAAATCAYAAAC6P96DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC+SURBVHhe7dghAcAwEMDAyXr/5GV1rGQOlgOH4iDPzBwAAAAAAKgwxgEAAAAASLljfHc/EQAAAAAA/sYYBwAAAAAgxRgHAAAAACDFGAcAAAAAIMUYBwAAAAAgxRgHAAAAACDFGAcAAAAAIMUYBwAAAAAgxRgHAAAAACDFGAcAAAAAIMUYBwAAAAAgxRgHAAAAACDFGAcAAAAAIMUYBwAAAAAgxRgHAAAAACDljnEAAAAAACgwxgEAAAAACJnzAhLcZN0iACZvAAAAAElFTkSuQmCC" InformativeScreenshot="5faa36d3d923c114eedec58bd9b0b497.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="138, 969, 54, 15" ElementType="Text" FriendlyName="'File name:'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAATCAYAAADBGB7WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD+SURBVFhH7VPREcMgCO1YTuMszsIobuIkVIwY9IgmTT9aI7l3hwYePMWXMQafgCV0Niyhs0EIdeixtgAWjQUM8QPLMez/FxqhIxFL6M/jhFC538SksWbz6Ko8Qo6H/VGk55D/O/lWvKtz3M7tnUELeyXJofZAxAHQckxE941SgWOh0o+I5FUDkpNFJGWdAym80bjRfBqFu+I46IFi+kJFkrov/Ooks5Vb0XKVdRaxmVJjxHGqhw03hWq3IzFqkvMtQlBqXOLo48YbJV+MlIqWU6zleKWGtRqjNflKD18dXfrXjs6l0aVbzHnBo//kRmmt9dAXOjeW0NmwhM4Fg2+pzljmPe2nEQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" Text="File name:" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;">
+                                        <uix:Target.FuzzySelectorArgument>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_11">&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;</Literal>
+                                          </InArgument>
+                                        </uix:Target.FuzzySelectorArgument>
+                                      </uix:Target>
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <uix:NClick ClickType="Double" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Click" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="1707, 994, 88, 26" ElementType="Button" FriendlyName="'&amp;Open'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='&amp;amp;Open' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAErSURBVGhD7ZXbEYMgEEXTEz/UQjMU4g+tUAod2AHhIYogJjPRFTJ3Z85MRODj7Hrz4pxbQAeEE7MKn+cZ3Mih8GmawA2cCmeMgQuBcGIgnBgIJwbCiYFwYvoULrXNyyhxvG9A+hMeZBurRFoTVpn/kd6Z8ChXy2JdKNcCbWW+Nih9CW+K9Y1IUy/dDvdb+r2xdtMf7kiV7lrOqC2qnvpi+hNulBXVu3zyvbxgLO4LgotmpDhy8RTFLme0XNe3ZtAy7oSvGc+s9xeasZvupYLk8kx9BxV9Cf8qw0tZ2ZlmwyC8TfW5ezl55hbPVTOO8hnCzwnSt9pPfJSldfbXmL8vYwWR8ivPyboCCCcGwokZUPjYQDgxEE4MhBPzUTi4nqZwcB+VcEADhJPC7RvUEgVEQTon0wAAAABJRU5ErkJggg==" InformativeScreenshot="ee554601aada04cc193b81427cfcb105.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="&amp;Open" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ClickType="Single" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Click 'Attach'" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/Expense/Client/default.asp" DesignTimeRectangle="1262, 337, 66, 30" ElementType="Button" FriendlyName="'Attach'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Attach' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Attach' type='button' check:text='Attach' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAiCAYAAADiS6/IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOESURBVGhD7ZnLUhNBFIZ9EgKkXMiD8C4ioCAiUCwJG30HlyQoBFRugrgxFGGDVQQWjAtINoBsQqpYsDmeW88lM50ZsqTTVX91/jn/9Mz50kyqmGf1RgN6iqsHxqIeGIsSwXzaP4PhD7/h+dwvyM8+bVGP1Cv1HGYQAzNbOoah+X0YnN5F7cDgu5CeqsdeqWfq3XCIgCFqQ/PJZF0Q9W52TgTM8McK5Gf2MYQ7RmfXPDGIgeFnysxPp0UMYmBoOw2+34M8iucZnR3yxMAChh66uxjG2cghbwcz/QPyKJqNXPJ2MOGfMwdlBTMwtY2BbZ13nPP2HTO1haGtLucGeIDj/hYW2+tHrcjxxb8PANeNlPXSZ14n6XpdzvYd83ZTQjxvPspLsy2G4x211RVMQX3BEzCd1svieR1/3cef3+47gNnoUmdwcE9ANqB0jWSu60GNoPijBX+oGTO4Kcys30JTD8l4gIN1s3a83vTO+LiAwS8Dr22GqXUjK5j+ye8wYITBzH6NbrwFRfpcJRAtKIXrdIwgqJcdU5c6nytQJS+Qg3xdd6GpB57Xoc9VPE7X42sj1DX1nFdl8PYdM/kNBiZQNBtl8LJLLtWfcmNN7zTIM5h/2Kh4AWPyKJqNTF3z4c/t+Vht8lKgVYNM0vo2b98xE185+LiZboa+peC4f8MmZ8CE6wgmvk5oaN6H7uc6XEfX8KrRXNbZvmPerEN/SFk835xleFXNVu+kAT3PgJH1AiBNrxbUNV9UMOZ6vJ4qnJO6AWN8NJ/m7Tvm9ZqEcOaTUn0NKvRnc15rq9fkOXF1If5QwWi9cC5gOB+GFq5rPtK8v75cP5yT618ImMOs9x/1HcCUVXgCK8WXb/DB+QCVckKdYMAdFMn7YKTODRE0U+Ocns8eh58PmpW1T/wvQ8DcCHBWOGvypGzeCiY3vsrB3LickOaLV9TADSwk1uUmm+cn6OUz/WJUylhfJaA0BByvYwatx3Awu6rr+XkdCnVBwQTXN2CS7zfN23cMBjk8voLzinPevmPGMIzKjX2RsGO+A5jPkBtFYVDklreDGV2WoC+3vB3MKww6rEQw9I/gPg6UoG+k5OC8nPzPcHojRz9ZfSNFyKFoNnLBU+/EIAaGXja9mNtDchh+uYThJXdmBEO9J75wI/Ve0QqHGBgSUaM3cvwCDh9GT1nUI/VqdopRIpieGvAfGPCAu+CuY4wAAAAASUVORK5CYII=" InformativeScreenshot="d8cc036ab91652eeb2ca45fdfe6488e5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Attach" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="994, 336, 261, 33" ElementType="InputBox" FriendlyName="'C:\fakepath\1_receipt_p…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='file' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='file' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQkAAAAlCAYAAABRcRydAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASZSURBVHhe7Z3LchNHFIbzJJYvlUV4EN4lBOyYEGJTbJUNvEOWSBAjcQmXQJxNTNneZIFtUp4swNogzEa4ygs2zfnP6Z5bxmI0NqlS1z9VXx390z3do1Onf7WsKs9XB4OBI4SQk6BJEELGQpMghIyFJkEIGQtNghAyFpoEiYZf1vfc+Rt/ua+v/ekWVkldkC/kDfmryitNgkTBavdvd+76upu/+kx46uZ/zEH9eS15Q/6Qx3JuaRJk6sEn4Lnr1Z+SZDKQx/KOgiZBpp7zNzfcwsq6FLnsJHykbqYRkc98fmkSZOrRv0Gs/EHOCOQzn1+aBJl6sE2e/+m5WxA0rvhI3UxLPvP5pUmQqcdMAn+wfCaFLjFAPbFGpEmQ6FCTuPq7WxAQA9TNNE2CRIeaRP4nPXIqaBIkOlDUc1eeSIE/8fFpTf2Pe3HsKo9ku871cWqaBIkO3UlceSwF/njC+EpNItkund8+Epv46F7cP+m6uCNNgkSH7iR+eGSFrvFRTR1Motw+cIk3CejuUPok791I9xg4j/7okx2j5JVdrwZz5LrpeNYPc4Txf/73o+9fHMMNB35+ux/0y47sfuq/v2aaJkGiw0zitwbseZMoncdCHx6kGiZhCz/0OdDFPUr2KjRey4K+5/uqaeT7Yk6029zF85luJ2IQx+9dW9vCOPl7+HLQJEh0oKhnLz90cwEp9HraFmblgQXq+6tJwDS8Thew1zrell/Evr8udt93NDxyo9C/LzsSfV00heL9eaPpB23t6bgnvp/Ta0SaBIkO3UlcfuDmlgXEwGf1ri7UZCtoH/uH+tUinDeTeJO2l3V2DUzigZmItmN8LPY3suilTfqraSS7do0aiz+OD127NH/VkV4L8vOfoaZJkOjQncTyfS3yyeKu2/AmUW7veCOAzptCldboTaIDHQxjOTMHjId5OkOYRmm+vClgXNUV/f6nSJMg0aE7ie/vudkc9fSON4n/ttvWfkdfp4bh2+zrhnzyew3mtj5Ipw+uo3pHdxAbiZzz19kO4tAl/rrK+0nHgLnYfRXac3wpjUiTINGhO4mlvhW8RC34WjoziUJ7zz7JN3qmdefw9nXuelvEaiKVWozlrZzAuf0dm28TBpDTSzZ3pvtmRjIPdHsfv2yIYfjxZpdem3FsBt3k/dbTNAkSHWYSPY8Uu1JHv9SFWnUkm1l/XfAwicL1tmjDMdp/WWxXU4DRFPtjkZuWvr132dcMHMfvXDtcL+3BaMJh94S2YDCYEzqM7dt1bhhM/n7xuo7u0SRIfKCoW4t3tcBbi1bo1E31XZoEiQ/dSUhxa6Evrklco26saRIkQnQncUkKXWhd+tUKn7qhXqNJkPgwk7jjWhcFKXqDupm+Q5Mg8aEmcfG2FXkKdTN9myZB4kNN4jspcnIm0CRIdOAft85ogXfdzIUu42mi5JH/CJdEB54+hZ/vZi50XEtADFBPppFH5DOfX5oEmXrwMJlvrj2XT0Ip9G9vSeHfYmwSJX/IIx/OQ6KEj/k7pZa88TF/JHrwCYinT+nDelZJXZAv5K28gwjQJAghY6FJEELGMHCfAOYAjScpdAmJAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" Text="C:\fakepath\1_receipt_ph.jpg" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='file' /&gt;" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ClickType="Single" DelayAfter="[delay]" DelayBefore="[delay]" DisplayName="Click" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.concursolutions.com/expense/client/default.asp" DesignTimeRectangle="1563, 1001, 47, 24" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl id='ext-gen632' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen632' tag='BUTTON' type='button' aaname='Save' check:text='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAcCAYAAADMW4fJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJhSURBVFhH3VjNbtNAGORJnDgR4n14CxooaZvSAuc8Ae9A40JbEygUSOHUqObApbRCmEObXBroxY2UQzh8fLPrTfyzttxDJW9W+jQ7+43XM/Eqkn1nMBzSotTihul9/033X/Tp3vOvVH9a7oJHeIXnVBgs3n2mv7DMBc8q0CwMUtY3v0iRYQjvsTDiaG0eGlnwHguDhLWNHjd7IR4aw+E9HebJZ1H1DYnGcG2Y9Y/c/GQcZodZPzAOtWHs1geqtQ4ksiif/6T+hCLjH/W7efrb4/owa+9F1VoS83jbnxJNrqgd5TQmJ0N/m1wfZnWfamv7Au0Qs7gzYu+jQUb/LP7URGh5TeCfhfoB+dzyv0Ev53JMqe8m98vnGWHe3aCiBviJRHvugBw3qoNBnntjGUxorigQcxnc90J9VFOwtGGqK12yV95KXA2xAJdHjMfkL7Vn/VM6mj0dhMH6BQcbU4f7uCbwT/l6rCWH0uvvl+T6MM03omwWqXlxDlNTOtpjjl+Xh++hP1+HtsNHzfcQVK3F+/P9inN9mMcu2RAwCmEm/yF/9cvzSB+mrskBP76WTwl6j+fKrOIcJFD9ZrjX6GLe5306sfvl+8kIs3eDOk8cDxjW9C7/CLP+seqdCB78Ogl5Qh/bp1hpw1SWd6i6vMu4yyKgGVwf5tEO12sWAFWVn+vDPHxFVW6ahhlhto2sVBi84FhoNhyyuCqN7RBLztlz6uUMr552s0vWUocqXKZglT2nXpvVBw38b1tLWyzcIuvBy/JiA0Fc/QcNFQgpxfcAPodlLniEVxUkFcb0WqAwQ/oPO6zPRR4d5fMAAAAASUVORK5CYII=" InformativeScreenshot="2dd68f08be244d6274930702dbc1d90e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expense Center' /&gt;" SearchSteps="FuzzySelector, Image" Text="Save" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF8SURBVDhPlZM7SwNBFIWnsBHEXlvBShAVxMZK/QWirT9CS0uxtLISfAuiBKIgRgmSRDGCIBjxAUYtVERi3GR2s5ts9nGde3cWExjB/eAyey73nJ19DOMxljfj7FvbZsUohR70Mr7LdC/RCnaqN1KhB70M0+xUP0QFPeiVAX2y/Ytbuob62x44X+ey0wx6lAGe9Q6V9BiUNhloK6LWGegH3eAUMnIiQBnguxboxz1kNE4GoZqbgUpmFMqxdnCLWZoJUQbYz0ugLTMws5OkQ3y7SKtnvtKKKAPMiwkobTBwyzekG6k9LojHaYHq7SxpdUB2PAjgd6QbqT3M0+6quWnSygD7aTF4hMsp0iG+a9Lq8XshPLpWBviOAfphF2irTLy8EXHXOdoV3+8EV7uimRBlAOIZeTCSQ/T5cDcYxuMd4Hwm5UTAnwEhTuEU7Jc1cD4S4q+yZPeX5oD0gGz/H/RQAN8Rh+moDepnw5EKPehlujiSFh7nrWiFHj3G8j9XxzvuC2dIqgAAAABJRU5ErkJggg==" InformativeScreenshot="fe9c39d5e24484a6af9ef9e35f4d3ae6.png">
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_13">&lt;html app='chrome.exe' title='*Expense Center*'/&gt;</Literal>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">https://www.concursolutions.com/expense/client/default.asp</Literal>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Helper_ShowStatus workflow" sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflow_Helpers\Helper_ShowStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Message">
+          <Literal x:TypeArguments="x:String">Completed expense entry</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MessageType">
+          <Literal x:TypeArguments="x:String">SUCCESS</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Title">
+          <Literal x:TypeArguments="x:String">Expense Entry</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

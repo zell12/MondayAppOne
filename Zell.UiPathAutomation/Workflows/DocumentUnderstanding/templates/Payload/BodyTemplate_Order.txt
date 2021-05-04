@@ -1,0 +1,19 @@
+{
+  "trigger": {
+    "outputFields": {
+      "itemId": <in_ParentItemId>,
+      "extractedOrderData": {
+        "OrderNumber": "<Order No.>",
+        "CustomerName": "<Customer Name>",
+        "Supplier": "<Supplier>",
+        "Terms": "<Terms>",
+        "DeliveryAddress": "<Delivery Address>",
+        "DeliveryDate": "<Delivery Date>",
+        "OrderDate": "<Order Date>"
+      },
+      "extractedSubItem": {
+        "SubItemMappingList": "[          <SubItem Mapping List>        ]"
+      }
+    }
+  }
+}

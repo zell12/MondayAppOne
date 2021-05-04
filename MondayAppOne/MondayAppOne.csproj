@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>4758f743-5035-46a9-8352-fd0acbfd0426</UserSecretsId>
+    <Configurations>Debug;Release</Configurations>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GraphQL.Client" Version="3.1.9" />
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.1.9" />
+    <PackageReference Include="JWT" Version="7.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CSharp\Zell.UiPathAutomation\Zell.UiPathAutomation.csproj" />
+    <ProjectReference Include="..\MondayLibs\MondayLibs.csproj" />
+  </ItemGroup>
+</Project>
